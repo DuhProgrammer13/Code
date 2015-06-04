@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:circleview="http://schemas.android.com/apk/res/com.kopperkow.silverrush"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/heart" />
+
+    <RelativeLayout
+        android:id="@+id/circle_loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="50dp" >
+
+        <com.kopperkow.silverrush.libraries.CircleView
+            android:id="@+id/CircleView01"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/CircleView02"
+            android:layout_marginRight="50dp"
+            android:layout_toLeftOf="@+id/CircleView02"
+            android:padding="30dp"
+            circleview:cFillColor="@color/white" />
+
+        <com.kopperkow.silverrush.libraries.CircleView
+            android:id="@+id/CircleView03"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/CircleView02"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@+id/CircleView02"
+            android:padding="30dp"
+            circleview:cFillColor="@color/white" />
+
+        <com.kopperkow.silverrush.libraries.CircleView
+            android:id="@+id/CircleView02"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:padding="30dp"
+            circleview:cFillColor="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

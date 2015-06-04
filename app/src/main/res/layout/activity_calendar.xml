@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kopperkow.silverrush.CalendarActivity" >
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/primary_material_dark" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="goBack"
+            android:orientation="horizontal" >
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_action_back"
+                android:onClick="goBack" />
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#0000"
+                android:gravity="center_vertical"
+                android:onClick="goBack"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="@string/activity_label"
+                android:textColor="#FFF"
+                android:textSize="20sp" >
+            </Button>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <LinearLayout
+            android:id="@+id/date_sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/date_popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple"
+        android:visibility="invisible" >
+
+        <RelativeLayout
+            android:id="@+id/top_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/primary_material_dark" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="goBack2"
+                android:orientation="horizontal" >
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/ic_action_back"
+                    android:onClick="goBack2" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#0000"
+                    android:gravity="center_vertical"
+                    android:onClick="goBack2"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/activity_label"
+                    android:textColor="#FFF"
+                    android:textSize="20sp" >
+                </Button>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/date_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_layout2"
+            android:background="@color/dark_grey"
+            android:padding="5dp"
+            android:text="filler"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/date_label" >
+
+            <LinearLayout
+                android:id="@+id/date_items_sv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

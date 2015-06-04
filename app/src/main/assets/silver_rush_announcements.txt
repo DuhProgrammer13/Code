@@ -1,0 +1,4 @@
+Welcome!
+Welcome to the official Silver Rush app for Android!
+R.drawable.total_2012
+10/12/2014

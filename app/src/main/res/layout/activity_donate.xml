@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/primary_material_dark" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="goBack"
+            android:orientation="horizontal" >
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_action_back"
+                android:onClick="goBack" />
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#0000"
+                android:gravity="center_vertical"
+                android:onClick="goBack"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="@string/activity_label"
+                android:textColor="#FFF"
+                android:textSize="20sp" >
+            </Button>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_grey"
+            android:padding="5dp"
+            android:text="Donate Online"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/grey" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey"
+                android:padding="10dp"
+                android:text="If you would like to donate with your credit card you can do it at the district&apos;s payment site. This is the same site you use to pay your school fees online."
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </ScrollView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Donate Online"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:onClick="openOnlinePayment" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_grey"
+            android:padding="5dp"
+            android:text="Donate From Home"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/grey" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey"
+                android:padding="10dp"
+                android:text="Students will be going around our neighborhoods to do odd jobs in return for a donation to the charity. If you would like to have them come click here to send an email."
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </ScrollView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Email"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:onClick="sendEmail" />
+    </LinearLayout>
+
+</RelativeLayout>
